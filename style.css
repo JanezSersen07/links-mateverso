@@ -1,0 +1,112 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Colores en un solo lugar para cambiarlos fácil */
+:root {
+  --verde-oscuro: #33491f;
+  --verde: #4a6630;
+  --verde-claro: #e3e8d6;
+  --crema: #ebe8dd;
+  --texto: #1c1c1c;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 16px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(160deg, var(--verde-oscuro), var(--verde));
+  color: var(--texto);
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  padding: 32px 24px;
+  background-color: var(--crema);
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+.perfil {
+  margin-bottom: 28px;
+}
+
+.logo {
+  display: block;
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  margin: 0 auto 8px;
+  /* Hace que el fondo claro del logo se mezcle con el fondo de la tarjeta */
+  mix-blend-mode: multiply;
+}
+
+/* El título se mantiene para lectores de pantalla, pero no se ve (el logo ya dice "Mateverso") */
+.solo-lectores {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+.bajada {
+  margin-top: 4px;
+  color: #5a5a5a;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.boton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--verde-oscuro);
+  background-color: var(--verde-claro);
+  border: 2px solid var(--verde);
+  border-radius: 12px;
+  transition: transform 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+}
+
+.boton:hover,
+.boton:focus-visible {
+  transform: translateY(-2px);
+  background-color: var(--verde);
+  color: #ffffff;
+}
+
+/* El botón de la tienda se destaca */
+.boton.principal {
+  background-color: var(--verde);
+  color: #ffffff;
+}
+
+.boton.principal:hover,
+.boton.principal:focus-visible {
+  background-color: var(--verde-oscuro);
+  border-color: var(--verde-oscuro);
+}
+
+.pie {
+  margin-top: 28px;
+  font-size: 0.8rem;
+  color: #7a7a7a;
+}
