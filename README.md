@@ -1,4 +1,6 @@
 # Links de Mateverso
+![Vista de la página](captura.PNG)
+
 
 Página de links para el emprendimiento **Mateverso**: un solo lugar con acceso a la tienda online, WhatsApp y redes sociales. Pensada para abrirse desde el celular, que es donde la ven los clientes desde Instagram y TikTok.
 
